@@ -23,9 +23,9 @@ def main():
     mouse = pygame.image.load(mouse_img).convert_alpha()
     
     while True:
-        for event in pygame.event.get():
-            if event.type == QUIT:
-                exit()
+        event = pygame.event.poll()
+        if event.type == QUIT:
+            exit()
         
         screen.blit(background,(0,0))
         
